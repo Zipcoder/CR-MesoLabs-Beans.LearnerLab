@@ -1,0 +1,17 @@
+package com.example.demo;
+import java.util.*;
+import com.example.demo.Teacher;
+
+public class Classroom {
+    Instructor instructorList;
+    Students studentList;
+
+    public Classroom(Instructor instructorList, Students studentList) {
+        this.instructorList = instructorList;
+        this.studentList = studentList;
+    }
+
+    public void hostLecture(Teacher teacher, double numberOfHours){
+        teacher.lecture(studentList, numberOfHours);
+    }
+}
