@@ -3,7 +3,7 @@ public class Classroom {
     Instructor instructorList;
     Students studentList;
 
-    public Classroom(Instructors instructorList, Students studentList) {
+    public Classroom(Instructor instructorList, Students studentList) {
         this.instructorList = instructorList;
         this.studentList = studentList;
     }
