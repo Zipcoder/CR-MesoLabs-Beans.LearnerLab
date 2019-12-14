@@ -1,6 +1,5 @@
-package com.example.demo;
-import com.example.demo.*;
-import java.util.*;
+package com.beans.learner.lab.demo;
+import java.util.List;
 
 public class Instructors extends People<Instructor> {
     public Instructors(List<Instructor> personList) {

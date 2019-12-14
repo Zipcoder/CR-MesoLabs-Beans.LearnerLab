@@ -1,6 +1,4 @@
-package com.example.demo;
-import com.example.demo.Person;
-import com.example.demo.Learner;
+package com.beans.learner.lab.demo;
 
 public class Student extends Person implements Learner{
     double totalStudyTime;

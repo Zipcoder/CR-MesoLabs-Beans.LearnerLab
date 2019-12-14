@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.beans.learner.lab.demo;
 
 public class Person {
     final Long id;

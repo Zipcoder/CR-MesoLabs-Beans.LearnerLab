@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.beans.learner.lab.demo;
 import java.util.*;
 import java.util.function.Consumer;
 

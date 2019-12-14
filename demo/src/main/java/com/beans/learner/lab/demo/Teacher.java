@@ -1,5 +1,4 @@
-package com.example.demo;
-import com.example.demo.Learner;
+package com.beans.learner.lab.demo;
 
 public interface Teacher {
     void teach(Learner learner, double numberOfHours);

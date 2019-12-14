@@ -1,7 +1,5 @@
-package com.example.demo;
+package com.beans.learner.lab.demo;
 import java.util.*;
-import java.util.function.Consumer;
-import com.example.demo.Student;
 
 public class Students extends People<Student> {
 

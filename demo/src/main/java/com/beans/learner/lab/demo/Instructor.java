@@ -1,18 +1,14 @@
-package com.example.demo;
-import com.example.demo.*;
+package com.beans.learner.lab.demo;
+import com.beans.learner.lab.demo.*;
 
 public class Instructor extends Person implements Teacher{
 
-    Learner learner;
 
     public Instructor(Long id, String name) {
         super(id, name);
     }
 
-    public void teach(Learner learner, double numberOfHours) {
-        learner.learn(numberOfHours);
-
-    }
+    public void teach(Learner learner, double numberOfHours) { learner.learn(numberOfHours); }
 
 
     public void lecture(Iterable<? extends Learner> learners, double numberOfHours) {
