@@ -1,18 +1,12 @@
 package com.example.demo.configtest;
 
-import com.beans.learner.lab.demo.Instructor;
 import com.beans.learner.lab.demo.Instructors;
-import com.beans.learner.lab.demo.Student;
-import com.beans.learner.lab.demo.Students;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,17 +25,17 @@ public class TestInstructorConfig {
 
     @Test
     public void tcUsaInstructors(){
-        Assert.assertEquals(1, tcUsaInstructors.size());
+        Assert.assertEquals("Nobles", tcUsaInstructors.findById(1L).getName());
     }
 
     @Test
     public void tcUkInstructors(){
-        Assert.assertEquals(2, tcUsaInstructors.size());
+        Assert.assertEquals("Dolio", tcUsaInstructors.findById(4L).getName());
     }
 
     @Test
     public void instructors(){
-        Assert.assertEquals(2, tcUsaInstructors.size());
+        Assert.assertEquals("Roberto", instructors.findById(5L).getName());
     }
 
 

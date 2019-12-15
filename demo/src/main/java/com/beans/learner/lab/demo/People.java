@@ -7,15 +7,15 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
      List<PersonType> personList;
 
 
-    public People(java.util.List<PersonType> personList) {
+    public People(List<PersonType> personList) {
         this.personList = personList;
     }
-    public void  add(PersonType personType) {
-        this.personList.add(personType);
+    public void  add(PersonType person) {
+        this.personList.add(person);
     }
 
-    public void remove(PersonType personType){
-        this.personList.remove(personType);
+    public void remove(PersonType person){
+        this.personList.remove(person);
     }
 
     public int size() {
@@ -26,15 +26,14 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
         this.personList.clear();
     }
 
-    public void addAll(Iterable<PersonType> personTypes){
-        for(PersonType personType : personTypes)
-         personList.add(personType);
+    public void addAll(Iterable<PersonType> personList){
+         this.personList.addAll((Collection<? extends PersonType>)personList);
     }
 
     public PersonType findById(long id) {
-        for(PersonType p: personList){
-            if(p.getId() == id){
-                return p;
+        for(PersonType person: personList){
+            if(person.getId() == id){
+                return person;
             }
         } return null;
     }
@@ -45,7 +44,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
     }
     @Override
     public Iterator<PersonType> iterator() {
-        return null;
+        return personList.iterator();
     }
 
 

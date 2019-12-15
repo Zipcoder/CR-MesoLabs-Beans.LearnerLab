@@ -1,13 +1,9 @@
 package com.example.demo;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.beans.learner.lab.demo.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
     public class AlumniTest {
         @Autowired
@@ -21,23 +17,17 @@ import java.util.List;
         @Before
         public void setUp() throws Exception {
             //Test 2 students, 3 instructors
-            Student student1 = new Student(1L, "Charlotte");
-            Student student2 = new Student(2L, "Chung");
             previousStudentList = new ArrayList<>();
-            previousStudentList.add(student1);
-            previousStudentList.add(student2);
+            previousStudentList.add(new Student(1L, "Charlotte"));
+            previousStudentList.add(new Student(2L, "Chung"));
 
-            Instructor instructor1 = new Instructor(3L, "Dolio");
-            Instructor instructor2 = new Instructor(4L, "Frolio");
-            Instructor instructor3 = new Instructor(5L, "Nobles");
-            instructorList = new java.util.ArrayList<>();
-            instructorList.add(instructor1);
-            instructorList.add(instructor2);
-            instructorList.add(instructor3);
+            instructorList = new ArrayList<>();
+            instructorList.add(new Instructor(3L, "Dolio"));
+            instructorList.add(new Instructor(4L, "Frolio"));
+            instructorList.add(new Instructor(5L, "Nobles"));
 
             students = new Students(previousStudentList);
             instructors = new Instructors(instructorList);
-
             alumni = new Alumni(students, instructors);
         }
 
@@ -47,23 +37,12 @@ import java.util.List;
 
         @Test
         public void executeBootCampTest() {
+            for(Student s: alumni.getPreviousStudents()) {
+                Assert.assertEquals(1200.0, s.getTotalStudyTime(), 0.000001);
+            }
 
 
         }
 
-        @Test
-        public void getPreviousStudents() {
-        }
 
-        @Test
-        public void setPreviousStudents() {
-        }
-
-        @Test
-        public void getInstructors() {
-        }
-
-        @Test
-        public void setInstructors() {
-        }
 }
