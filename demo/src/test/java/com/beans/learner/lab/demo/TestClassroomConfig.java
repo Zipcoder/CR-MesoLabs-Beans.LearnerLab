@@ -1,4 +1,4 @@
-package com.example.demo.configtest;
+package com.beans.learner.lab.demo;
 
 import com.beans.learner.lab.demo.*;
 import org.junit.*;

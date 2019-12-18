@@ -1,4 +1,4 @@
-package com.example.demo.configtest;
+package com.beans.learner.lab.demo;
 
 import com.beans.learner.lab.demo.Instructors;
 import org.junit.*;
@@ -15,10 +15,10 @@ public class TestInstructorConfig {
 
     @Autowired
     @Qualifier("tcUsaInstructors")
-    private Instructors tcUsaInstructors;
+     Instructors tcUsaInstructors;
     @Autowired
-    @Qualifier("tcUkaInstructors")
-    private Instructors tcUkInstructors;
+    @Qualifier("tcUkInstructors")
+     Instructors tcUkInstructors;
     @Autowired
     @Qualifier("instructors")
     private Instructors instructors;
@@ -30,7 +30,7 @@ public class TestInstructorConfig {
 
     @Test
     public void tcUkInstructors(){
-        Assert.assertEquals("Dolio", tcUsaInstructors.findById(4L).getName());
+        Assert.assertEquals("Dolio", tcUkInstructors.findById(4L).getName());
     }
 
     @Test

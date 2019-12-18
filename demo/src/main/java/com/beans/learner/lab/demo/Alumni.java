@@ -3,15 +3,19 @@ package com.beans.learner.lab.demo;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.*;
 
 @Component
 public class Alumni {
 
+    @Autowired
+    @Qualifier("previousStudents")
     private Students previousStudents;
-    private Instructors instructors;
 
     @Autowired
-    public Alumni(Students previousStudents, Instructors instructors) {
+    private Instructors instructors;
+
+    public Alumni(@Qualifier("previousStudents") Students previousStudents, Instructors instructors) {
         this.previousStudents = previousStudents;
         this.instructors = instructors;
     }
@@ -24,8 +28,8 @@ public class Alumni {
         double numberOfHoursToTeach = numberOfHoursToTeachEachStudent * numberOfStudents;
         double numberOfHoursPerInstructor = numberOfHoursToTeach / numberOfInstructors;
 
-        for(Instructor instructor: instructors)
-            instructor.lecture(previousStudents, numberOfHoursPerInstructor);
+        for(Instructor instructor: instructors.personList)
+            instructor.lecture(previousStudents.personList, numberOfHoursPerInstructor);
     }
 
     public Students getPreviousStudents() {

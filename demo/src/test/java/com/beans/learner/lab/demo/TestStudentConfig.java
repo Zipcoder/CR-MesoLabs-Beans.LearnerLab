@@ -1,4 +1,4 @@
-package com.example.demo.configtest;
+package com.beans.learner.lab.demo;
 
 import com.beans.learner.lab.demo.Students;
 import org.junit.*;
@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class TestStudentConfig {
 
     @Autowired
-    @Qualifier("students")
+    @Qualifier("currentStudents")
     Students students;
 
     @Autowired

@@ -10,6 +10,7 @@ public abstract class People<PersonType extends Person> implements Iterable<Pers
     public People(List<PersonType> personList) {
         this.personList = personList;
     }
+
     public void  add(PersonType person) {
         this.personList.add(person);
     }

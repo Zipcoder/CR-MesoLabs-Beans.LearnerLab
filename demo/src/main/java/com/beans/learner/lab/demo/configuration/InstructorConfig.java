@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Configuration
 public class InstructorConfig {
     @Bean
-    @Qualifier("tcUsaInstructors")
     public Instructors tcUsaInstructors(){
         List<Instructor> tcUsaTeachers = new ArrayList<>();
         tcUsaTeachers.add(new Instructor(1L, "Nobles"));
@@ -18,7 +17,6 @@ public class InstructorConfig {
 
     }
     @Bean
-    @Qualifier("tcUkInstructors")
     public Instructors tcUkInstructors(){
 
         List<Instructor> tcUkTeachers = new ArrayList<>();
@@ -29,7 +27,6 @@ public class InstructorConfig {
     }
     @Bean
     @Primary
-    @Qualifier("instructors")
     public Instructors instructors(){
         ArrayList<Instructor>  allInstructors = new ArrayList<>();
         allInstructors.addAll(tcUsaInstructors().findAll());

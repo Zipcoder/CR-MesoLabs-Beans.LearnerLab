@@ -10,8 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Configuration
 public class StudentConfig {
 
-    @Bean
-    @Qualifier("students")
+    @Bean(name = "currentStudents")
     public Students currentStudents() {
         List<Student> cohort52 = new ArrayList<>();
         cohort52.add(new Student(1L, "Charlotte"));
