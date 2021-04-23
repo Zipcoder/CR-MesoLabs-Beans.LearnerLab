@@ -30,8 +30,8 @@ public class InstructorsConfig {
         );
     }
 
-    @Bean @Primary
-    public Instructors instructors() {
+    @Bean(name = "instructors") @Primary
+    public Instructors zipCodeWilmington() {
         return new Instructors(
                 new Instructor(84, "The Sleuth"),
                 new Instructor(83, "The Villain"),
