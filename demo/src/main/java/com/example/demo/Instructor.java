@@ -5,7 +5,7 @@ import java.util.List;
 public class Instructor extends Person implements Teacher {
 
 
-    public Instructor(Long id, String name) {
+    public Instructor(long id, String name) {
         super(id, name);
     }
 

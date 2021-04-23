@@ -27,7 +27,7 @@ public abstract class People <PersonType extends Person> implements Iterable<Per
         return persons.listIterator();
     }
 
-    public PersonType findBYId(Long id) {
+    public PersonType findBYId(long id) {
         for (PersonType pt : persons){
             if (pt.getId() == id) {
                 return pt;

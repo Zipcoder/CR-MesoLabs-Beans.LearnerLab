@@ -13,5 +13,12 @@ public class Classroom {
         teacher.lecture(studs, numberOfHours);
 
     }
-    
+
+    public Instructors getInstruct() {
+        return instruct;
+    }
+
+    public Students getStuds() {
+        return studs;
+    }
 }
