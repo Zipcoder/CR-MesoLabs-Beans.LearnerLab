@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class Instructors extends People<Instructor>{
@@ -7,13 +8,9 @@ public class Instructors extends People<Instructor>{
         super(personList);
     }
 
-    @Override
-    public boolean hasNext() {
-        return false;
-    }
 
     @Override
-    public Person next() {
+    public Iterator<Instructor> iterator() {
         return null;
     }
 }
