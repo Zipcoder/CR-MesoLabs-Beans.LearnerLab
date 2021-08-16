@@ -1,6 +1,5 @@
-package com.example.demo;
+package com.example.demo.models;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
