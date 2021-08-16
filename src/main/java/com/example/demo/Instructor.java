@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Instructor extends Person implements Teacher{
 
-    List<Learner> learners;
-
     public Instructor(Long id) {
         super(id);
     }
