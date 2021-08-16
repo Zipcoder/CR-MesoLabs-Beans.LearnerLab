@@ -3,7 +3,7 @@ package com.example.demo;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class People <PersonType extends Person> implements Iterator<Person> {
+public abstract class People <PersonType extends Person> implements Iterable<PersonType> {
     private List<PersonType> personList;
 
     public People(List<PersonType> personList){
