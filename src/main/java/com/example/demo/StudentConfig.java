@@ -11,7 +11,6 @@ public class StudentConfig {
 
     @Bean(name = "students")
     public Students currentStudents(){
-        //return students;
         return new Students(
                 new Student(1l, "Zach"),
                 new Student(2l, "Manny"),
