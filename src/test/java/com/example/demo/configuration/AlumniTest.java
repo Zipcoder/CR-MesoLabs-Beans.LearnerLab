@@ -34,7 +34,7 @@ public class AlumniTest {
         //given
         double expected = 1200;
         //when
-        Student student2 = alumni.getStudents().findById(1L);
+        Student student2 = alumni.getStudents().findById(2L);
         double actual = student2.getTotalStudyTime();
         //then
         Assert.assertEquals(expected, actual, 0.01);
@@ -45,7 +45,7 @@ public class AlumniTest {
         //given
         double expected = 1200;
         //when
-        Student student3 = alumni.getStudents().findById(1L);
+        Student student3 = alumni.getStudents().findById(3L);
         double actual = student3.getTotalStudyTime();
         //then
         Assert.assertEquals(expected, actual, 0.01);
