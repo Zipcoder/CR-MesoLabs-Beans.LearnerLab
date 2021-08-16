@@ -1,9 +1,12 @@
-package com.example.demo;
+package com.example.demo.models;
+
+import com.example.demo.Learner;
+import com.example.demo.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Instructor extends Person implements Teacher{
+public class Instructor extends Person implements Teacher {
 
     public Instructor(Long id) {
         super(id);

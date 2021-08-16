@@ -1,13 +1,14 @@
-package com.example.demo;
+package com.example.demo.models;
 
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class People<PersonType extends Person> implements Iterable<Person>{
 
     List<PersonType> personList;
 
-    public People(List<PersonType> personList) {
-        this.personList = personList;
+    public People(PersonType... persons) {
+        personList = Arrays.asList(persons);
     }
 
     public void add(PersonType person) {
