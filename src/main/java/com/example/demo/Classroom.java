@@ -13,4 +13,20 @@ public class Classroom {
     public void hostLecture(Teacher teacher, double numberOfHours) {
         teacher.lecture(students.findAll(), numberOfHours);
     }
+
+    public Instructors getInstructors() {
+        return instructors;
+    }
+
+    public void setInstructors(Instructors instructors) {
+        this.instructors = instructors;
+    }
+
+    public Students getStudents() {
+        return students;
+    }
+
+    public void setStudents(Students students) {
+        this.students = students;
+    }
 }
