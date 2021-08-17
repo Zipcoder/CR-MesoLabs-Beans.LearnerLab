@@ -2,7 +2,7 @@ package com.example.demo.models;
 
 public class Student extends Person implements Learner {
 
-    double totalStudyTime;
+    double totalStudyTime = 0;
 
     public Student(Long id, String name) {
         super(id, name);
