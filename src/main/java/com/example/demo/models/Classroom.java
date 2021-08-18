@@ -1,12 +1,12 @@
 package com.example.demo.models;
 
 public class Classroom {
-    private static Instructors instructors;
-    private static Students students;
+    private Instructors instructors;
+    private Students students;
 
     public Classroom(Instructors instructors, Students students){
-        Classroom.instructors = instructors;
-        Classroom.students = students;
+        this.instructors = instructors;
+        this.students = students;
     }
 
     public void hostLecture(Teacher teacher, double numberOfHours){
@@ -14,11 +14,11 @@ public class Classroom {
 
     }
 
-    public static Instructors getInstructors() {
+    public Instructors getInstructors() {
         return instructors;
     }
 
-    public static Students getStudents() {
+    public Students getStudents() {
         return students;
     }
 }
