@@ -9,6 +9,8 @@ import java.util.List;
 
 public class Instructor extends Person implements Teacher {
 
+    double totalTeachTime = 0;
+
     public Instructor(Long id, String name) {
         super(id, name);
     }
@@ -22,6 +24,7 @@ public class Instructor extends Person implements Teacher {
     public void lecture(Iterable<? extends Learner> learners, double numberOfHours) {
         List<Learner> classSize = new ArrayList<>();
         learners.forEach(classSize::add);
+        totalTeachTime += numberOfHours;
         double numberOfHoursPerLearner = numberOfHours / classSize.size();
 
         for (Learner learner : classSize) {
@@ -29,5 +32,7 @@ public class Instructor extends Person implements Teacher {
             }
         }
 
-
+    public double getTotalTeachTime() {
+        return totalTeachTime;
+    }
 }
