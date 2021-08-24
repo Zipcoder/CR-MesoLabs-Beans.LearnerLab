@@ -3,27 +3,24 @@ package com.example.demo.enity;
 import com.example.demo.Learner;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public abstract class People<E extends Person> implements Iterable<E>{
+public abstract class People<PersonType extends Person> implements Iterable<PersonType>{
 
-    List<E> personList = new ArrayList<E>();
+    List<PersonType> personList;
 
-    public People(List<E> personList) {
-        this.personList = personList;
+    public People(PersonType... persons) {
+        personList = Arrays.asList(persons);
     }
 
-    public People() {
-
-    }
-
-    public void add(E person) {
+    public void add(PersonType person) {
         personList.add(person);
     }
 
-    public E findByID(Long id) {
-        for (E person : personList)
+    public PersonType findByID(Long id) {
+        for (PersonType person : personList)
             if (person.getId() == (id))
                 return person;
         return null;
@@ -33,21 +30,8 @@ public abstract class People<E extends Person> implements Iterable<E>{
         return personList;
     }
 
-    public boolean contains(E person) {
-        if(personList.contains(person))
-            return true;
-        return false;
-    }
-
-    public void remove(E person) {
-        if(contains(person)) {
+    public void remove(PersonType person) {
             personList.remove(person);
-        }
-    }
-
-    public void removeById(Long id) {
-        E person = findByID(id);
-        remove(person);
     }
 
     public void clear() {
@@ -58,21 +42,10 @@ public abstract class People<E extends Person> implements Iterable<E>{
         return personList.size();
     }
 
-    public Integer count() {
-        return personList.size();
-    }
-
-    public abstract E[] getArray();
-
-    public void addAll(Iterable<Person> iterable){
-        Iterator iterator=iterable.iterator();
-        while (iterator.hasNext()) {
-            personList.add((E) iterator.next());
+    public void addAll(Iterable<PersonType> iterable){
+        for (PersonType person : iterable) {
+            personList.add(person);
         }
-    }
-
-    public Iterator<E> iterator() {
-        return personList.iterator();
     }
 
 }

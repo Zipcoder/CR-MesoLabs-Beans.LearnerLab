@@ -1,19 +1,16 @@
 package com.example.demo.enity;
 
-public class Instructors extends People<Instructor>{
-    private static final Instructors instance=new Instructors();
+import java.util.Iterator;
 
-    private Instructors(){
-        super();
-        this.add(new Instructor(1l,"Dolio"));
-        this.add(new Instructor(2l,"Leon"));
-        this.add(new Instructor(3l,"Kris"));
+public class Instructors extends People<Instructor>{
+
+    public Instructors(Instructors... instructors){
     }
 
-    public static Instructors getInstance(){return instance;}
 
-    public Instructor[] getArray() {
-        return super.personList.toArray(new Instructor[0]);
+    @Override
+    public Iterator<Instructor> iterator() {
+        return null;
     }
 }
 
