@@ -1,4 +1,7 @@
-package com.example.demo;
+package com.example.demo.enity;
+
+import com.example.demo.Learner;
+import com.example.demo.enity.Person;
 
 public class Student extends Person implements Learner {
     Double totalStudyTime;

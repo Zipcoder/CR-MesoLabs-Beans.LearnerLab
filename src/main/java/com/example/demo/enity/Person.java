@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.enity;
 
 public class Person {
     private final Long id;
