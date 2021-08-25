@@ -25,7 +25,7 @@ public class Instructor extends Person implements Teacher {
             teach(learner, (numberOfHours/listOfLearners.size()));
     }
 }
-
+//important part to remember
     private List<Learner> iterableToList(Iterable<? extends Learner> learners) {
         Iterator iterator= learners.iterator();
         List<Learner> actualList = new ArrayList<>();
